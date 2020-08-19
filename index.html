@@ -194,7 +194,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/08/20/Bader%20charge/" target="_blank">DFT calculations</a>
+	  <a class="article-title" href="/2020/08/20/Bader%20charge/" target="_blank">Bader Charge分析</a>
   
     </h1>
   
@@ -217,11 +217,11 @@
     
     <p>下载VTST脚本 <a target="_blank" rel="noopener" href="https://theory.cm.utexas.edu/henkelman/code/">Henkelman Group</a> </p>
 <p>INCAR设置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ LCHARG=.TURE.</span><br><span class="line">  LAECHG=.TURE.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LCHARG=.TURE.</span><br><span class="line">LAECHG=.TURE.</span><br></pre></td></tr></table></figure>
 <p>计算完成后生成文件AECCAR0，AECCAR1，AECCAR2<br>使用chgsum.gl脚本生成AECCAR_sum文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./chgsum.gl AECCAR0 AECCAR2</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./chgsum.gl AECCAR0 AECCAR2</span><br></pre></td></tr></table></figure>
 <p>使用bader可执行程序分析</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./bader CHGCAR –ref AECCAR_sum</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bader CHGCAR –ref AECCAR_sum</span><br></pre></td></tr></table></figure>
 <p>得到ACF.dat CHARGE为电荷，结合原子的价电子数目（可到POTCAR中查找）即可分析电荷转移情况。</p>
 
     
@@ -234,6 +234,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Bader</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -308,6 +319,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DFT</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -469,6 +491,14 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Bader</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DFT</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
